@@ -1,0 +1,36 @@
+<html>
+
+	<head> <title> TODO | EDIT TASK</title> </head>
+	
+	<body>
+		<h1>History of IPL Cricket</h1>
+		
+		<a href="/create">Create task</a>
+	
+		<table border='3' align='center' width=600px style="color:Black">
+			<tr>
+					<th>Team_Name</th>
+					<th>Captain</th>
+					<th>Year</th>
+					<th>Highest_Get_Runner</th>
+					<th>Status</th>
+					<th>Edit</th>
+					<th>Delete</th>	
+			</tr>
+			{% for x in d %}
+					<tr>
+						   <td>{{x.1}}</td>
+						   <td>{{x.2}}</td>
+						   <td>{{x.3}}</td>
+						   <td>{{x.4}}</td>
+						   <td>{{x.5}}</td>
+						   <td><a href="edit/{{x.0}}">Edit</a></td>
+						   <td><a href="delete/{{x.0}}">Delete</a></td>
+					 </tr>
+			{% endfor %}
+	
+		</table>
+
+	</body>
+
+</html>
